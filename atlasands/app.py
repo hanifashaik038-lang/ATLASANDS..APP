@@ -1,4 +1,3 @@
-# app.py — ATLASANDS Premium Homepage
 import streamlit as st
 from utils.image_utils import load_css, hero_html, dest_card_html
 from utils.budget import estimate_budget

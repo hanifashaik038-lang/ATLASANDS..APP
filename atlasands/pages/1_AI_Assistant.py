@@ -1,5 +1,3 @@
-# pages/1_AI_Assistant.py
-# Premium AI travel concierge chat.
 import streamlit as st
 from utils.image_utils import load_css
 from utils.ai import ask_ai

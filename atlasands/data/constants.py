@@ -2,7 +2,7 @@
 # Static text and dropdown options used across the app.
 
 APP_NAME = "ATLASANDS"
-TAGLINE = "Explore The World Around You"
+TAGLINE = "Your World, Your Way"
 SUBTAGLINE = (
     "Take a break from the stress of everyday life — "
     "plan magical journeys and explore your favourite destinations across India."

@@ -1,4 +1,3 @@
-# pages/4_Packing_Assistant.py
 import streamlit as st
 from utils.image_utils import load_css
 from utils.packing import default_packing

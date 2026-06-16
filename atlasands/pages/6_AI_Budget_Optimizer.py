@@ -1,4 +1,3 @@
-# pages/6_AI_Budget_Optimizer.py
 import streamlit as st
 from utils.image_utils import load_css
 from utils.ai import ask_ai

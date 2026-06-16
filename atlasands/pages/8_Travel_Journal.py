@@ -1,4 +1,3 @@
-# pages/8_Travel_Journal.py
 import streamlit as st
 from utils.image_utils import load_css
 from utils.ai import ask_ai

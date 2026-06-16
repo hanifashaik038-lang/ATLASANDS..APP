@@ -1,4 +1,3 @@
-# pages/5_Saved_Trips.py
 import streamlit as st
 from utils.image_utils import load_css
 

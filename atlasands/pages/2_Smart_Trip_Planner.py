@@ -1,4 +1,3 @@
-# pages/2_Smart_Trip_Planner.py
 import streamlit as st
 from utils.image_utils import load_css
 from utils.ai import ask_ai

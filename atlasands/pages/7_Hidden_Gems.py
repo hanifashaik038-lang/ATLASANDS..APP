@@ -1,4 +1,3 @@
-# pages/7_Hidden_Gems.py
 import streamlit as st
 from utils.image_utils import load_css
 from utils.ai import ask_ai
