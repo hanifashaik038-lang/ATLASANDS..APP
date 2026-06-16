@@ -1,0 +1,291 @@
+/* =========================================================
+   ATLASANDS — Premium Stylesheet
+   Calligraphy headings + Times New Roman body
+   Glassmorphism + smooth animations
+   ========================================================= */
+
+/* Calligraphy fonts via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&family=Allura&display=swap');
+
+/* ---------- Base typography ----------
+   All body text -> Times New Roman as requested */
+html, body, [class*="css"], .stApp, .stMarkdown,
+p, span, div, label, li, td, th, input, textarea, select, button {
+    font-family: "Times New Roman", Times, serif !important;
+    color: #2C1810;
+}
+
+/* All headings -> calligraphy */
+h1, h2, h3, h4, h5, h6,
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+    font-family: 'Great Vibes', 'Dancing Script', cursive !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px;
+    color: #5B3A1E;
+    line-height: 1.2;
+}
+
+h1 { font-size: 4.5rem !important; }
+h2 { font-size: 3.2rem !important; }
+h3 { font-size: 2.2rem !important; }
+h4 { font-size: 1.8rem !important; }
+
+/* ---------- App background — warm cream gradient ---------- */
+.stApp {
+    background:
+        radial-gradient(1200px 600px at 10% 0%, #FFF3E0 0%, transparent 60%),
+        radial-gradient(1000px 500px at 100% 100%, #FAE3C6 0%, transparent 60%),
+        linear-gradient(135deg, #FFF8F0 0%, #FAEBD7 50%, #F5DEB3 100%);
+    background-attachment: fixed;
+}
+
+/* ---------- Hero banner ---------- */
+.hero {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 560px;
+    margin: 16px 0 40px 0;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    filter: brightness(0.72) saturate(1.1);
+    transition: transform 8s ease;
+}
+.hero:hover img { transform: scale(1.08); }
+
+.hero-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFFFF;
+    width: 92%;
+}
+.hero-text h1 {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 7rem !important;
+    color: #FFFFFF !important;
+    text-shadow: 2px 4px 24px rgba(0,0,0,0.65);
+    margin: 0;
+    animation: fadeUp 1.2s ease;
+}
+.hero-text p {
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 1.4rem;
+    color: #FFF8F0;
+    font-style: italic;
+    margin-top: 12px;
+    text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+    animation: fadeUp 1.6s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Glassmorphism cards ---------- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 24px;
+    padding: 26px;
+    margin: 12px 0;
+    box-shadow: 0 12px 40px rgba(139, 90, 43, 0.15);
+    transition: transform .4s ease, box-shadow .4s ease, background .4s ease;
+}
+.glass-card:hover {
+    transform: translateY(-8px) scale(1.015);
+    box-shadow: 0 20px 60px rgba(139, 90, 43, 0.28);
+    background: rgba(255,255,255,0.72);
+}
+
+/* ---------- Destination card ---------- */
+.dest-card {
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: transform .4s ease, box-shadow .4s ease;
+    margin-bottom: 24px;
+    height: 100%;
+}
+.dest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(212,165,116,0.45);
+}
+.dest-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    display: block;
+}
+.dest-body { padding: 20px 22px 24px 22px; }
+.dest-body h3 {
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 2.2rem !important;
+    color: #8B5A2B !important;
+    margin: 0 0 4px 0;
+}
+.dest-state {
+    font-style: italic;
+    color: #8B5A2B;
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+.dest-desc {
+    color: #3a2818;
+    margin: 0 0 14px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #D4A574, #8B5A2B);
+    color: #fff !important;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: "Times New Roman", Times, serif !important;
+    letter-spacing: .3px;
+}
+
+/* ---------- Buttons ---------- */
+.stButton > button, .stDownloadButton > button, .stFormSubmitButton > button {
+    background: linear-gradient(135deg, #D4A574 0%, #8B5A2B 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 12px 36px !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .8px;
+    box-shadow: 0 8px 25px rgba(139,90,43,0.4);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.stButton > button:hover, .stDownloadButton > button:hover, .stFormSubmitButton > button:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 15px 40px rgba(139,90,43,0.55);
+}
+
+/* ---------- Inputs ---------- */
+.stTextInput input, .stTextArea textarea, .stNumberInput input,
+.stSelectbox div[data-baseweb="select"] > div,
+.stDateInput input {
+    background: rgba(255,255,255,0.7) !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(139,90,43,0.25) !important;
+    font-family: "Times New Roman", Times, serif !important;
+    color: #2C1810 !important;
+}
+.stSlider [data-baseweb="slider"] > div > div { background: #8B5A2B !important; }
+
+/* ---------- Sidebar ---------- */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #FAEBD7 0%, #F5DEB3 100%);
+    border-right: 1px solid rgba(139,90,43,0.15);
+}
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    font-family: 'Dancing Script', cursive !important;
+    color: #8B5A2B !important;
+}
+
+/* ---------- Section title decorator ---------- */
+.section-title {
+    text-align: center;
+    margin: 56px 0 28px 0;
+}
+.section-title h2 {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 4.2rem !important;
+    color: #8B5A2B !important;
+    margin: 0;
+}
+.section-title .sub {
+    font-family: "Times New Roman", Times, serif !important;
+    font-style: italic;
+    color: #5B3A1E;
+    font-size: 1.15rem;
+    margin-top: 4px;
+}
+
+/* ---------- Floating AI button ---------- */
+.fab {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    width: 68px; height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #D4A574, #8B5A2B);
+    box-shadow: 0 10px 30px rgba(139,90,43,0.55);
+    display: flex;
+    align-items: center; justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    z-index: 9999;
+    animation: pulse 2.2s infinite;
+    text-decoration: none !important;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+/* ---------- Chat bubbles ---------- */
+[data-testid="stChatMessage"] {
+    background: rgba(255,255,255,0.6) !important;
+    border-radius: 18px !important;
+    padding: 14px 18px !important;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.5);
+    margin-bottom: 10px !important;
+}
+
+/* ---------- Metric card ---------- */
+[data-testid="stMetric"] {
+    background: rgba(255,255,255,0.6);
+    border-radius: 18px;
+    padding: 16px;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* ---------- Tabs ---------- */
+.stTabs [data-baseweb="tab-list"] { gap: 8px; }
+.stTabs [data-baseweb="tab"] {
+    background: rgba(255,255,255,0.55);
+    border-radius: 14px 14px 0 0;
+    padding: 8px 16px;
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 1.2rem !important;
+}
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #D4A574, #8B5A2B) !important;
+    color: #fff !important;
+}
+
+/* ---------- Hide default chrome ---------- */
+#MainMenu, footer { visibility: hidden; }
+header[data-testid="stHeader"] { background: transparent; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .hero { height: 360px; }
+    .hero-text h1 { font-size: 4rem !important; }
+    h1 { font-size: 3rem !important; }
+    h2 { font-size: 2.2rem !important; }
+    .section-title h2 { font-size: 3rem !important; }
+}
+
+html { scroll-behavior: smooth; }
